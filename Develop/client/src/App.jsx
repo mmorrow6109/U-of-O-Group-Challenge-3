@@ -1,6 +1,9 @@
+import { useState } from 'react'
+import './App.css'
+
 //App.jsx is connected to main.jsx (in src NOT components) and renders the main component.  main.jsx is connected to index.html, which is our entry point.  This is how we render our components to the DOM.
 
-import Main from './components/main.jsx'
+import Main from './components/main.js'
 
 function App() {
   return (
