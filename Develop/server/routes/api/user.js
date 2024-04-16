@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { User } = require("../models/User");
-const { auth } = require("../middleware/auth");
+const { User } = require("../../models/User");
+const { authMiddleware } = require("../../utils/auth");
 
 
-router.get("/auth", auth, (req, res) => {
+router.get("/auth", authMiddleware, (req, res) => {
     res.status(200).json({
         _id: req.user._id,
-        isAdmin: req.user.role === 0 ? false : true,
         isAuth: true,
         email: req.user.email,
         name: req.user.name,
@@ -54,7 +53,7 @@ router.post("/login", (req, res) => {
     });
 });
 
-router.get("/logout", auth, (req, res) => {
+router.get("/logout", authMiddleware, (req, res) => {
     User.findOneAndUpdate({ _id: req.user._id }, { token: "", tokenExp: "" }, (err, doc) => {
         if (err) return res.json({ success: false, err });
         return res.status(200).send({
