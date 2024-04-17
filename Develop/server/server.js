@@ -7,10 +7,11 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Database URI
-const dbURI = process.env.MONGODB_URI || 'mongodb+srv://msmorrow6109:ooTTE0TQtUxY9H5Q@uofogc3.2s8ffxb.mongodb.net/';
+const dbUri = 'mongodb+srv://msmorrow6109:ooTTE0TQtUxY9H5Q@uofogc3.2s8ffxb.mongodb.net/?useCreateIndex=true';
+
 
 // Connect to MongoDB
-mongoose.connect(dbURI, {
+mongoose.connect(dbUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
