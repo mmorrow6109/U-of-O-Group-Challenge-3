@@ -1,4 +1,5 @@
 const express = require('express');
+const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
 const mongoose = require('mongoose');
 const routes = require('./routes');
@@ -7,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Database URI
-const dbUri = 'mongodb+srv://msmorrow6109:ooTTE0TQtUxY9H5Q@uofogc3.2s8ffxb.mongodb.net/?useCreateIndex=true';
+const dbUri = 'mongodb+srv://msmorrow6109:ooTTE0TQtUxY9H5Q@uofogc3.2s8ffxb.mongodb.net/?retryWrites=true&w=majority&appName=UofOGC3';
 
 
 // Connect to MongoDB
