@@ -7,13 +7,13 @@ const typeDefs = gql`
         username: String!
         email: String!
         movieCount: Int
-        savedMovies: [Book]
+        savedMovies: [Movie]
     }
     type Auth {
         token: ID!
         user: User
     }
-    type Book {
+    type Movie {
         movieId: ID!
         direcotr: [String]
         description: String
