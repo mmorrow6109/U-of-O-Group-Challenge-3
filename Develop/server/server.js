@@ -11,11 +11,7 @@ const dbUri = 'mongodb+srv://msmorrow6109:ooTTE0TQtUxY9H5Q@uofogc3.2s8ffxb.mongo
 
 
 // Connect to MongoDB
-mongoose.connect(dbUri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+mongoose.connect(dbUri);
 
 // Database connection events
 const db = mongoose.connection;
