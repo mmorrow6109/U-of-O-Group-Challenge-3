@@ -39,10 +39,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Connect to MongoDB
-mongoose.connect(dbUri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(dbUri)
 .then(() => {
   // Start listening for incoming requests
   app.listen(PORT, () => {
