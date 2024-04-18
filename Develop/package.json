@@ -8,7 +8,8 @@
         "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
         "install": "cd server && npm i && cd ../client && npm i",
         "build": "cd client && npm run build",
-        "render-build": "npm install && npm run build"
+        "render-build": "npm install && npm run build",
+        "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
     },
     "keywords": [],
     "author": "",
@@ -18,11 +19,15 @@
         "vite": "^5.2.9"
     },
     "dependencies": {
-        "body-parser": "^1.19.0",
-        "express": "^4.17.1",
-        "mongodb": "^6.5.0",
-        "apollo-server-express": "^3.4.0",
         "apollo-server": "^3.13.0",
-        "graphql": "^16.8.1"
+        "apollo-server-express": "^3.4.0",
+        "body-parser": "^1.19.0",
+        "dotenv": "^16.4.5",
+        "express": "^4.17.1",
+        "graphql": "^16.8.1",
+        "mongodb": "^6.5.0"
+    },
+    "engines": {
+        "node": "20.10.0"
     }
 }

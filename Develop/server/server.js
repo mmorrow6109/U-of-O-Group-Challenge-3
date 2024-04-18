@@ -7,6 +7,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+require("dotenv").config();
 
 // Database URI
 const dbUri = 'mongodb+srv://msmorrow6109:ooTTE0TQtUxY9H5Q@uofogc3.2s8ffxb.mongodb.net/?retryWrites=true&w=majority&appName=UofOGC3';
