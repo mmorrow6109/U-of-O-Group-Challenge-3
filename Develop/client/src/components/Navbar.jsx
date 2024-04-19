@@ -12,7 +12,7 @@ function Navbar({ onSearch }) {
 
   return (
     <div className='navbar'>
-      <h1 className='Title'>Title</h1>
+      <h1 className='Title'>React Movie Database</h1>
       <form onSubmit={handleSearch} id='form'>
         <input
           type="text"

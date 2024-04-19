@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import { SidebarData } from './components/SidebarData';
-import Main from './components/Main'; // Assuming you have a Main component
+import Main from './components/Main';
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -22,8 +21,10 @@ function App() {
   return (
     <div className='App'>
       <Navbar onSearch={handleSearch} />
-      <Sidebar />
-      <Main movies={searchResults} />
+      <div className="main">
+        <Sidebar />
+        <Main movies={searchResults} />
+      </div>
     </div>
   );
 }

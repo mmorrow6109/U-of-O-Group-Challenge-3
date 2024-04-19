@@ -9,7 +9,6 @@ function Main({ movies }) {
 
   return (
     <div className="main">
-      <h2>Search Results</h2>
       <div className="movie-container">
         {movies.map((movie) => (
           <div key={movie.id} className="movie">
