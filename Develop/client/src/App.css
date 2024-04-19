@@ -98,3 +98,79 @@
     width: 25%; /* Set width to 25% for extra large screens */
   }
 }
+
+/* App.css */
+
+.movie {
+  display: inline-block;
+  width: 150px; /* Adjust as needed */
+  margin: 10px;
+  padding: 10px;
+  /* border: 1px solid #ccc;
+  border-radius: 5px; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.movie img {
+  width: 100%;
+  /* border-radius: 5px; */
+}
+
+.movie h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.movie span {
+  font-weight: bold;
+}
+
+.App {
+  display: flex; /* Use flexbox layout */
+}
+
+.Main {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Add this CSS to your existing CSS file */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
