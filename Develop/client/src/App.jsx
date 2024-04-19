@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import './App.css'
+import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar'
 
-//App.jsx is connected to main.jsx (in src NOT components) and renders the main component.  main.jsx is connected to index.html, which is our entry point.  This is how we render our components to the DOM.
-
-import Main from '../components/main.jsx'
 
 function App() {
   return (
-    <>
-    <Main/>
-    </>
+    <div className='App'>
+        <Navbar />
+        <Sidebar />
+    </div>
   )
 }
 
