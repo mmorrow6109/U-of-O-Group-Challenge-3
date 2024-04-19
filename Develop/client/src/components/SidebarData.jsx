@@ -13,7 +13,7 @@ export const SidebarData = [
     {
         title: "Favorites",
         icon: <ThumbUpIcon />,
-        link: "/liked"
+        link: "/favorites"
     },
     {
         title: "Friends",

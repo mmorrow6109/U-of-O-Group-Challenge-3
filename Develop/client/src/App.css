@@ -65,3 +65,36 @@
   background-color: darkslategray;
   color: azure;
 }
+
+/* Default size */
+.element {
+  width: 100%; /* Set width to 100% by default */
+}
+
+/* Small screens (ssm) */
+@media screen and (min-width: 375px) {
+  .element {
+    width: 100%; /* Set width to 100% for small screens */
+  }
+}
+
+/* Medium screens (md) */
+@media screen and (min-width: 768px) {
+  .element {
+    width: 50%; /* Set width to 50% for medium screens */
+  }
+}
+
+/* Large screens (lg) */
+@media screen and (min-width: 1024px) {
+  .element {
+    width: 33.33%; /* Set width to 33.33% for large screens */
+  }
+}
+
+/* Extra large screens (xl) */
+@media screen and (min-width: 1280px) {
+  .element {
+    width: 25%; /* Set width to 25% for extra large screens */
+  }
+}
