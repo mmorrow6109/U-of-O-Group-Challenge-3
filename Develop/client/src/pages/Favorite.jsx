@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 
-function Liked() {
+function Favorite() {
   return (
     <div>
       <h1>hello</h1>
@@ -9,4 +9,4 @@ function Liked() {
   )
 }
 
-export default Liked
+export default Favorite
