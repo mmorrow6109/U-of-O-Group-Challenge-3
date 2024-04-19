@@ -11,14 +11,9 @@ export const SidebarData = [
         link: "/",
     },
     {
-        title: "Liked",
+        title: "Favorites",
         icon: <ThumbUpIcon />,
         link: "/liked"
-    },
-    {
-        title: "Saved",
-        icon: <GradeIcon  />,
-        link: "/saved"
     },
     {
         title: "Friends",

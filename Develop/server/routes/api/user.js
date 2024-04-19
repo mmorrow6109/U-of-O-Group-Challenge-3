@@ -62,4 +62,17 @@ router.get("/logout", authMiddleware, (req, res) => {
     });
 });
 
+// GET /friends route
+router.get("/friends", authMiddleware, (req, res) => {
+    // Find all users except the current user
+    User.find({ _id: { $ne: req.user._id } }, (err, users) => {
+        if (err) {
+            // If an error occurs, send a 400 status with the error message
+            return res.status(400).send({ error: 'Error fetching users' });
+        }
+        // If users are found, send them as a response
+        res.status(200).send(users);
+    });
+});
+
 module.exports = router;
