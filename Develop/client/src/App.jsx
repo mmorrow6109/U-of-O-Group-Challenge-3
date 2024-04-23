@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import BrowserRouter, Routes, and Route
+
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
+import CreateAccountPage from './pages/CreateAccountPage'; // Import the CreateAccountPage component
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -19,13 +22,18 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <Navbar onSearch={handleSearch} />
-      <div className="main">
-        <Sidebar />
-        <Main movies={searchResults} />
+    <Router>
+      <div className='App'>
+        <Navbar onSearch={handleSearch} />
+        <div className="main">
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<Main movies={searchResults} />} />
+            <Route path="/login" element={<CreateAccountPage />} /> {/* Define the route for the login page */}
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
