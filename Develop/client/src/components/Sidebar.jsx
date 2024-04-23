@@ -1,23 +1,22 @@
-import React, {useState} from 'react'
-import "../App"
-import {SidebarData} from './SidebarData'
-import Home from '../pages/Home'
-
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { SidebarData } from './SidebarData';
 
 function Sidebar() {
     return (
         <div className='Side'>
             <ul className='SidebarList'>
-                {SidebarData.map((val, key) => {
-                    return (
-                        <li className='rows'  id={window.location.pathname == val.link ? "active" : ""} key={key} onClick={() => {window.location.pathname = val.link}}> 
-                          <div id='icon'>{val.icon}</div><div id='title'>{val.title}</div>
-                        </li>
-                    );
-                })}
+                {SidebarData.map((val, key) => (
+                    <li className='rows' id={window.location.pathname === val.link ? "active" : ""} key={key}>
+                        <NavLink to={val.link}>
+                            <div id='icon'>{val.icon}</div>
+                            <div id='title'>{val.title}</div>
+                        </NavLink>
+                    </li>
+                ))}
             </ul>
         </div>
-    )
+    );
 }
 
-export default Sidebar
+export default Sidebar;

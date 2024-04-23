@@ -23,6 +23,10 @@
   cursor: pointer;
 }
 
+.SidebarList a:visited {
+  color: inherit; 
+}
+
 .SidebarList .rows {
   display: flex;
   flex-direction: row;
