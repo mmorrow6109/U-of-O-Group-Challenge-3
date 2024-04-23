@@ -21,8 +21,9 @@ function Navbar({ onSearch }) {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button type="submit" className="btn">Search</button>           
+        <button type="submit" className="btn">Search</button>    
       </form>
+      <button className="btn">Sign In / Create Account</button>
     </div>
   );
 }
